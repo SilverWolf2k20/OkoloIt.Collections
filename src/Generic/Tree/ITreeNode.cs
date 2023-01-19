@@ -10,7 +10,7 @@
         /// <summary>
         /// Данные.
         /// </summary>
-        public T Data { get; set; }
+        public T? Data { get; set; }
 
         /// <summary>
         /// Родитель.
@@ -31,13 +31,13 @@
         /// <summary>
         /// Добавляет коллекцию ветвей.
         /// </summary>
-        /// <param name="nodes"></param>
+        /// <param name="nodes">Колекция ветвей.</param>
         public void AddNodes(IEnumerable<ITreeNode<T>> nodes);
 
         /// <summary>
         /// Возвращает данные.
         /// </summary>
         /// <returns>Данные, хранящиеся этой в ветви дерева.</returns>
-        public T GetDataGeneric();
+        public T? GetDataGeneric();
     }
 }
