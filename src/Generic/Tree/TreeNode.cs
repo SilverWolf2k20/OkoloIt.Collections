@@ -9,8 +9,10 @@ namespace OkoloIt.Collections.Generic
     /// <typeparam name="T">Тип данных, хранящихся в дереве.</typeparam>
     public class TreeNode<T> : ITreeNode<T>
     {
+        #region Public Constructors
+
         /// <summary>
-        /// Создает экземляр ветви дерева. 
+        /// Создает экземляр ветви дерева.
         /// </summary>
         /// <param name="data">Данные.</param>
         public TreeNode(T data) : this(data, null)
@@ -18,7 +20,7 @@ namespace OkoloIt.Collections.Generic
         }
 
         /// <summary>
-        /// Создает экземляр ветви дерева. 
+        /// Создает экземляр ветви дерева.
         /// </summary>
         /// <param name="data">Данные.</param>
         /// <param name="parent">Родитель.</param>
@@ -29,25 +31,19 @@ namespace OkoloIt.Collections.Generic
             Nodes = new Collection<ITreeNode<T>>();
         }
 
+        #endregion Public Constructors
+
+        #region Public Properties
+
         /// <summary>
         /// Данные.
         /// </summary>
         public T? Data { get; set; }
 
         /// <summary>
-        /// Родитель.
+        /// Свойсво, определяющее содержатся ли дочерние элементы.
         /// </summary>
-        public ITreeNode<T>? Parent { get; }
-
-        /// <summary>
-        /// Дочерние ветви.
-        /// </summary>
-        public ICollection<ITreeNode<T>> Nodes { get; }
-
-        /// <summary>
-        /// Уровень вложенности.
-        /// </summary>
-        public int Level => Parent?.Level + 1 ?? 0;
+        public bool IsLeaf => Nodes.Count == 0;
 
         /// <summary>
         /// Свойсво, определяющее является текущая ветвь корнем.
@@ -55,9 +51,23 @@ namespace OkoloIt.Collections.Generic
         public bool IsRoot => Parent is null;
 
         /// <summary>
-        /// Свойсво, определяющее содержатся ли дочерние элементы.
+        /// Уровень вложенности.
         /// </summary>
-        public bool IsLeaf => Nodes.Count == 0;
+        public int Level => Parent?.Level + 1 ?? default;
+
+        /// <summary>
+        /// Дочерние ветви.
+        /// </summary>
+        public ICollection<ITreeNode<T>> Nodes { get; }
+
+        /// <summary>
+        /// Родитель.
+        /// </summary>
+        public ITreeNode<T>? Parent { get; }
+
+        #endregion Public Properties
+
+        #region Public Methods
 
         /// <summary>
         /// Добавляет ветвь.
@@ -94,7 +104,7 @@ namespace OkoloIt.Collections.Generic
         /// Возвращает перечислитель, который выполняет итерацию по коллекции.
         /// </summary>
         /// <returns>
-        /// Объект System.Collections.IEnumerator, который можно использовать 
+        /// Объект System.Collections.IEnumerator, который можно использовать
         /// для перебора.
         /// </returns>
         public IEnumerator<ITreeNode<T>> GetEnumerator()
@@ -111,5 +121,7 @@ namespace OkoloIt.Collections.Generic
         /// </returns>
         IEnumerator IEnumerable.GetEnumerator()
             => GetEnumerator();
+
+        #endregion Public Methods
     }
 }
