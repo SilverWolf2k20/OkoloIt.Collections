@@ -3,7 +3,7 @@ using OkoloIt.Collections.Generic;
 
 #region Functions
 
-void ShowTreeInConsole(ITreeNode tree, int offset)
+static void ShowTreeInConsole(ITreeNode tree, int offset)
 {
     Console.WriteLine($"{new string(' ', offset)}{tree.GetData()}");
     offset += 2;

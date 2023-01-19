@@ -90,14 +90,14 @@ namespace OkoloIt.Collections.Generic
         /// Возвращает данные, хранящиеся в ветви дерева.
         /// </summary>
         /// <returns>Данные.</returns>
-        public object GetData()
-            => GetDataGeneric() ?? new object();
+        object ITreeNode.GetData()
+            => GetData() ?? new object();
 
         /// <summary>
         /// Возвращает данные.
         /// </summary>
         /// <returns>Данные, хранящиеся этой в ветви дерева.</returns>
-        public T? GetDataGeneric()
+        public T? GetData()
             => Data;
 
         /// <summary>

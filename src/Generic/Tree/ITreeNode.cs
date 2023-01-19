@@ -44,7 +44,7 @@
         /// Возвращает данные.
         /// </summary>
         /// <returns>Данные, хранящиеся этой в ветви дерева.</returns>
-        public T? GetDataGeneric();
+        public new T? GetData();
 
         #endregion Public Methods
     }
