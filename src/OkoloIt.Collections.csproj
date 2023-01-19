@@ -4,6 +4,12 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Company>Okolo IT</Company>
+    <Authors>Okolo IT</Authors>
+    <Version>1.0.0</Version>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Description>Adds additional containers.</Description>
+    <AssemblyName>OkoloIt.Collections</AssemblyName>
+    <PackageTags>Result</PackageTags>
   </PropertyGroup>
-
 </Project>

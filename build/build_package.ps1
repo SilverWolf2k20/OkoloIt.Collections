@@ -1,9 +1,10 @@
 ﻿# Clear Release folder
-$packagePath = $sourceDirectory + "\bin\Release\*.nupkg";
+$packagePath = "..\src\bin\Release\*.nupkg";
+$projfilePath = "..\src\OkoloIt.Collections.csproj";
 
 Remove-Item -Path $packagePath;
-dotnet clean $csProjfileName -c Release;
+dotnet clean $projfilePath -c Release;
 
 # Build Project
-dotnet build $csProjfileName -c Release;
-dotnet pack  $csProjfileName -c Release;
+dotnet build $projfilePath -c Release;
+dotnet pack  $projfilePath -c Release;
