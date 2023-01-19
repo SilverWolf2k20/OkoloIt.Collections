@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OkoloIt.Collections", "src\OkoloIt.Collections.csproj", "{BDB19E08-A9DC-4725-9A71-978D96672D51}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OkoloIt.Collections.Example", "samples\OkoloIt.Collections.Example.csproj", "{DC7820C2-315D-4473-B5F1-9444FAF82F2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BDB19E08-A9DC-4725-9A71-978D96672D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDB19E08-A9DC-4725-9A71-978D96672D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDB19E08-A9DC-4725-9A71-978D96672D51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC7820C2-315D-4473-B5F1-9444FAF82F2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC7820C2-315D-4473-B5F1-9444FAF82F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC7820C2-315D-4473-B5F1-9444FAF82F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC7820C2-315D-4473-B5F1-9444FAF82F2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
